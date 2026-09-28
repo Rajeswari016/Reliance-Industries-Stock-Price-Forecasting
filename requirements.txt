@@ -3,7 +3,6 @@ pandas
 numpy
 matplotlib
 scikit-learn
-statsmodels
-tensorflow
-openpyxl
 joblib
+tensorflow==2.16.1
+openpyxl
