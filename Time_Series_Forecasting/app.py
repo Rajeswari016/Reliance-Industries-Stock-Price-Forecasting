@@ -1,3 +1,4 @@
+import os
 import streamlit as st
 import pandas as pd
 import numpy as np
@@ -21,8 +22,10 @@ st.set_page_config(
 # CONFIGURATION
 # =========================================================
 
-MODEL_PATH = "reliance_lstm_model.keras"
-SCALER_PATH = "reliance_stock_scaler.pkl"
+BASE_DIR = os.path.dirname(os.path.abspath(__file__))
+
+MODEL_PATH = os.path.join(BASE_DIR, "reliance_lstm_model.keras")
+SCALER_PATH = os.path.join(BASE_DIR, "reliance_stock_scaler.pkl")
 
 SEQUENCE_LENGTH = 60
 FORECAST_DAYS = 30
